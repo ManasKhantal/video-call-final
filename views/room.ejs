@@ -59,16 +59,25 @@
 
             </div>
             <div class="main_message_container">
-                <form id="form" action="" style="width: 100%;margin-left: 7%;">
+                <form id="form" action=""
+                    style="width:100%;margin-left: 7%;border-radius: 15px;background-color: #e0dddd;">
                     <input id="input" placeholder="Send a message" autocomplete="off"></input>
-                    <input id="submit" type="submit" value="➡️">
+                    <!-- <input id="submit" type="submit" value="➡️"> -->
+                    <i onclick="sendMsg()" id="submit" class="fa-solid fa-paper-plane fa-lg"></i>
                 </form>
             </div>
         </div>
     </div>
     <div class="call-action-div">
-        <button id="micBtn" onclick="muteAudio()">🎙️ Mic On</button>
-        <button id="cameraBtn" onclick="muteVideo()">📷 Camera On</button>
+        <div id="left-bottom-time">
+        </div>
+        <div class="control-option">
+            <!-- <button id="micBtn" onclick="muteAudio()">🎙️ Mic On</button>
+            <button id="cameraBtn" onclick="muteVideo()">📷 Camera On</button> -->
+            <i id="micBtn" onclick="muteAudio()" class="fa-solid fa-microphone fa-2xl"></i>
+            <i id="cameraBtn" onclick="muteVideo()" class="fa-solid fa-video fa-2xl"></i>
+            <i id="hangBtn" onclick="hangCall()" class="fa-solid fa-phone-slash fa-2xl" style="color: #ff0000;"></i>
+        </div>
     </div>
 </body>
 
