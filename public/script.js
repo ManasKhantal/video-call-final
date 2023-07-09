@@ -151,11 +151,10 @@ socket.on('chat message', function (msg) {
     messages.appendChild(item);
     window.scrollTo(0, document.body.scrollHeight);
 });
-
-var left_bottom_time = document.getElementById('left-bottom-time');
-var current = new Date();
-var time = current.toLocaleTimeString();
-var timeToShow = document.createElement('p');
-timeToShow.textContent = time;
-console.log(time);
-left_bottom_time.appendChild(timeToShow);
+refreshTime()
+function refreshTime() {
+    const timeDisplay = document.getElementById("time");
+    const dateString = new Date().toLocaleTimeString();
+    timeDisplay.textContent = dateString;
+}
+setInterval(refreshTime, 1000);
